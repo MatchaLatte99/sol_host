@@ -1,5 +1,5 @@
 // Next.js Landing Page Component
-
+import Chatbot from "../components/Chatbot";
 import Head from 'next/head';
 import styles from './page.module.css'; // Assuming you have a CSS module file
 
@@ -42,6 +42,7 @@ export default function LandingPage() {
       <footer className={styles.footer}>
         © 2024 My Landing Page. All rights reserved.
       </footer>
+       <Chatbot />
     </div>
   );
 }
