@@ -34,7 +34,7 @@ export default function Home() {
               width={20}
               height={20}
             />
-            Deploy now
+            hello world
           </a>
           <a
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -42,9 +42,13 @@ export default function Home() {
             rel="noopener noreferrer"
             className={styles.secondary}
           >
-            Read our docs
+            HOW ARE YOU
           </a>
         </div>
+         <iframe
+        class="chatbot-container"
+        src="https://bot.dialogflow.com/b5523111-0f84-4c6d-91f6-8e7cd5691fa6">
+    </iframe>
       </main>
       <footer className={styles.footer}>
         <a
