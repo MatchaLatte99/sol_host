@@ -1,98 +1,46 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+// Next.js Landing Page Component
 
-export default function Home() {
+import Head from 'next/head';
+import styles from './page.module.css'; // Assuming you have a CSS module file
+
+export default function LandingPage() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className={styles.container}>
+      <Head>
+        <title>My Landing Page</title>
+        <meta name="description" content="Welcome to my landing page" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            hello world
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            HOW ARE YOU
-          </a>
-        </div>
-         <iframe
-        class="chatbot-container"
-        src="https://bot.dialogflow.com/b5523111-0f84-4c6d-91f6-8e7cd5691fa6">
-    </iframe>
-      </main>
+      <header className={styles.header}>
+        <h1 className={styles.logo}>My Landing Page</h1>
+        <nav className={styles.nav}>
+          <a href="#home" className={styles.link}>Home</a>
+          <a href="#about" className={styles.link}>About</a>
+          <a href="#services" className={styles.link}>Services</a>
+          <a href="#contact" className={styles.link}>Contact</a>
+        </nav>
+      </header>
+
+      <section className={styles.hero}>
+        <h2 className={styles.heroTitle}>Welcome to My Landing Page</h2>
+        <p className={styles.heroSubtitle}>This is where your journey begins.</p>
+        <button className={styles.ctaButton}>Get Started</button>
+      </section>
+
+      <section className={styles.chatbotSection}>
+        <iframe
+          className={styles.chatbotContainer}
+          src="https://bot.dialogflow.com/b5523111-0f84-4c6d-91f6-8e7cd5691fa6"
+          title="Chatbot"
+          width="100%"
+          height="400px"
+          style={{ border: 'none' }}
+        ></iframe>
+      </section>
+
       <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        © 2024 My Landing Page. All rights reserved.
       </footer>
     </div>
   );
