@@ -1,7 +1,8 @@
 // Next.js Landing Page Component
-import Chatbot from "../components/Chatbot";
 import Head from 'next/head';
 import styles from './page.module.css'; // Assuming you have a CSS module file
+import Chatbot from "../component/Chatbot";
+
 
 export default function LandingPage() {
   return (
@@ -29,14 +30,6 @@ export default function LandingPage() {
       </section>
 
       <section className={styles.chatbotSection}>
-        <iframe
-          className={styles.chatbotContainer}
-          src="https://bot.dialogflow.com/b5523111-0f84-4c6d-91f6-8e7cd5691fa6"
-          title="Chatbot"
-          width="100%"
-          height="400px"
-          style={{ border: 'none' }}
-        ></iframe>
       </section>
 
       <footer className={styles.footer}>
